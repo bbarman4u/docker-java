@@ -19,12 +19,13 @@ $ java -jar target/spring-boot-web.jar
 
   access http://localhost:8080
 
-//dockerize
-
-// create a docker image
-$ sudo docker build -t spring-boot:1.0 .
-// run it
-$ sudo docker run -d -p 8080:8080 -t spring-boot:1.0
-
-  access http://localhost:8080
 ```
+## Dockerize & Use
+
+- Create a docker image: `docker build -t bb8docker/spring-boot-hello:1.0 .`
+- Push to docker hub: `docker push bb8docker/spring-boot-hello:1.0` 
+- Run it locally: `docker run --rm -d -p 8080:8080 -t bb8docker/spring-boot-hello:1.0`
+- Access: 
+  - http://localhost:8080/
+  - http://localhost:8080/test
+  - http://localhost:8080/hello

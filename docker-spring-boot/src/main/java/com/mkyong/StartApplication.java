@@ -17,6 +17,20 @@ public class StartApplication {
         return "index";
     }
 
+    @GetMapping("/hello")
+    public String hello(final Model model) {
+        model.addAttribute("title", "Docker + Spring Boot");
+        model.addAttribute("msg", "Welcome to the docker container Hello!");
+        return "index";
+    }
+
+    @GetMapping("/test")
+    public String test(final Model model) {
+        model.addAttribute("title", "Docker + Spring Boot");
+        model.addAttribute("msg", "Welcome to the docker container Test!");
+        return "index";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(StartApplication.class, args);
     }
